@@ -1,0 +1,32 @@
+<mat-card class="mat-elevation-z4">
+    <mat-card-title>Alterar Departamento</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"[(ngModel)]="department.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Região"[(ngModel)]="department.region"  name="region">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cidade" [(ngModel)]="department.city"  name="city">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Estado" [(ngModel)]="department.state"  name="state">
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Diretoria</mat-label>
+            <mat-select [(ngModel)]="department.boardDirector"  name="boardDirector" required>
+                <mat-option *ngFor="let boardDirector of boardDirectors " [value]="boardDirector.name" >
+                {{boardDirector.id}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-card>
+<button  mat-raised-button (click)="updateDepartment()" color="accent">
+    Alterar
+</button>
+
+<button  mat-raised-button (click)="cancel()">
+    Cancelar
+</button>
