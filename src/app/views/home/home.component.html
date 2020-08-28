@@ -1,8 +1,101 @@
-<mat-card class="home mat-elevation-z3">
-    <mat-card-title class="title">
-        Bem Vindo!
-    </mat-card-title>
-    <mat-card-subtitle class="subtitle">
-        Sistema para registrar, alterar e excluir um departamento.
-    </mat-card-subtitle>
-</mat-card>
+<div class="main">
+    <mat-card class="home mat-elevation-z3">
+        <mat-card-title class="title">
+            Bem Vindo!
+        </mat-card-title>
+        <mat-card-subtitle class="subtitle">
+            Sistema para registrar, alterar e excluir um departamento.
+        </mat-card-subtitle>
+    </mat-card>
+    <div class="repos">
+        <mat-card class="repo mat-elevation-z3">
+            <mat-card-header>
+            <mat-icon mat-card-avatar>code</mat-icon>
+            <mat-card-title>GitHub Repo</mat-card-title>
+            <mat-card-subtitle>Frontend</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+            <h2>
+                Aplicação Frontend
+            </h2>
+            <p>
+                Esta aplicação foi desenvolvida com o Framework Angular 10, utilizei 
+                Node + Express para servidor, Material Ui para os componentes, algumas 
+                estilizações com CSS, Heroku.
+            </p>
+            </mat-card-content>
+            <mat-card-actions>
+            <a href="https://github.com/phelliperodrigues/departments-frontend-angular10" target="_blank" rel="noopener noreferrer">
+                <button mat-raised-button color="primary">Ver</button>
+            </a>
+            </mat-card-actions>
+        </mat-card>
+        <mat-card class="repo mat-elevation-z3">
+            <mat-card-header>
+            <mat-icon mat-card-avatar>code</mat-icon>
+            <mat-card-title>GitHub Repo</mat-card-title>
+            <mat-card-subtitle>Backend</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <h2>
+                    Aplicação Backend
+                </h2>
+               <p>
+                   Aplicação desenvolvida com Java 11, Spring Boot compilada com Maven, 
+                   (TDD) JUnit, Mockito, BDD, PostgreSQL, Docker, DockerCompose e Travis, Heroku.
+                   
+               </p>
+            </mat-card-content>
+            <mat-card-actions>
+            <a href="https://github.com/phelliperodrigues/departments-api-springboot" target="_blank" rel="noopener noreferrer">
+                <button mat-raised-button color="primary">Ver</button>
+            </a>            </mat-card-actions>
+        </mat-card>      
+    </div>
+    <div class="repos">
+        <mat-card class="repo mat-elevation-z3">
+            <mat-card-header>
+            <mat-icon mat-card-avatar>dvr</mat-icon>
+            <mat-card-title>Deocumentação</mat-card-title>
+            <mat-card-subtitle>API Rest</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <h2>
+                    Documentação Swagger
+                </h2>
+               <p>
+                   A API foi desenvolvida no padrão RESTfull e todos seus endpoints documentados
+                   com Swagger para facilitar o entendimento e testa-la
+                   
+               </p>
+            </mat-card-content>
+            <mat-card-actions>
+            <a href="https://github.com/phelliperodrigues/departments-frontend-angular10" target="_blank" rel="noopener noreferrer">
+                <button mat-raised-button color="primary">Ver</button>
+            </a>            </mat-card-actions>
+        </mat-card>
+        <mat-card class="repo mat-elevation-z3">
+            <mat-card-header>
+            <mat-icon mat-card-avatar>dvr</mat-icon>
+            <mat-card-title>Travis</mat-card-title>
+            <mat-card-subtitle>Pipeline</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <h2>
+                    Documentação Swagger
+                </h2>
+               <p>
+                Utilizei Travis para gerir meus deploys, fazendo com que assim 
+                nenhum deploy quebrado vá para produção, e o deploy foi feito no PaaS Heroku.
+
+                   
+               </p>
+            </mat-card-content>
+            <mat-card-actions>
+            <a href="https://travis-ci.com/phelliperodrigues/departments-api-springboot" target="_blank" rel="noopener noreferrer">
+                <button mat-raised-button color="primary">Ver</button>
+            </a>            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+  

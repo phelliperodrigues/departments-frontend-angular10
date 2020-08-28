@@ -91,7 +91,6 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "frontend-departments:build"
-            
           },
           "configurations": {
             "production": {
@@ -108,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "frontend-departments"
+  "defaultProject": "frontend-departments",
+  "cli": {
+    "analytics": "4ae37ca8-a66e-4145-9c1f-2f60538a4d10"
+  }
 }
