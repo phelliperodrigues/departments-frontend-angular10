@@ -37,10 +37,7 @@ export class DepartmentService {
   }
 
   errorHandler(e: any) : Observable<any>{
-    e.error.errors.map(erro => {
-      console.log(erro);
-    })
-    this.showMessage("Ops! Ocorreu algum erro!\nConfira o console!", true)
+    this.showMessage("Ops! Ocorreu algum erro!", true)
     return EMPTY
   }
   read(): Observable<Department[]> {
