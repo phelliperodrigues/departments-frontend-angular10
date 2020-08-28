@@ -8,9 +8,9 @@ import { Observable, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class DepartmentService {
-  const httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
+  httpOptions = {
+    headers: new HttpHeaders({ 
+      'Content-Type': 'application/json',
       'Accept':  'application/json'
     })
   };
