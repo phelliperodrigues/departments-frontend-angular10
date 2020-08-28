@@ -1,6 +1,0 @@
-{
-    "/api": {
-        "target": "https://apirest-departments.herokuapp.com",
-        "secure": false
-    }
-}
