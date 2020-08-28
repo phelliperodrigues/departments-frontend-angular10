@@ -4,20 +4,13 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Department} from './department.model'
 import { Observable, EMPTY } from 'rxjs';
-import { environment } from '../../env/env'
 @Injectable({
   providedIn: 'root'
 })
 export class DepartmentService {
-  httpOptions = {
-    headers: new HttpHeaders({ 
-      'Content-Type': 'application/json'
-    })
-  };
-
-  // baseUrl = "http://localhost:8080/api/departments"
   
-   baseUrl = environment.baseUrl
+  baseUrl = "https://apirest-departments.herokuapp.com/api/departments"
+  
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
@@ -31,7 +24,7 @@ export class DepartmentService {
   }
 
   create(department: any) :Observable<Department>{
-      return this.http.post<any>(this.baseUrl, department, this.httpOptions).pipe(
+      return this.http.post<any>(this.baseUrl, department).pipe(
         map(obj => obj),
         catchError(e => this.errorHandler(e) )
       );
