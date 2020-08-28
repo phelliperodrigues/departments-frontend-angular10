@@ -1,11 +1,11 @@
 .main {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    width: 100%;
 }
 
 .home .title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     line-height: 1.2;
 }
@@ -18,14 +18,11 @@
     display: flex;
     flex-direction: row;
 }
+
 .repo {
-    width: 400px;
-    height: 250px;
-    margin: 20px 20px 0 0;
+    width: 50%;
+    margin: 10px 5px 0 0;
 
 }
 
-.repo p {
-    margin: 20px 0 0 0;
 
-}
