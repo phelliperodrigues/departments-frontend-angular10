@@ -8,6 +8,12 @@ import { Observable, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class DepartmentService {
+  const httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Accept':  'application/json'
+    })
+  };
   
   baseUrl = "https://apirest-departments.herokuapp.com/api/departments"
   
@@ -24,7 +30,7 @@ export class DepartmentService {
   }
 
   create(department: any) :Observable<Department>{
-      return this.http.post<any>(this.baseUrl, department).pipe(
+      return this.http.post<any>(this.baseUrl, department,this.httpOptions).pipe(
         map(obj => obj),
         catchError(e => this.errorHandler(e) )
       );
