@@ -31,8 +31,11 @@ export class DepartmentService {
   }
 
   errorHandler(e: any) : Observable<any>{
-    
-    this.showMessage(e.error.errors, true)
+    if (e.error.errors.size > 0 ) {      
+       this.showMessage("Alguns do campos obrigatórios não foram preenchidos", true)
+    } else {
+      this.showMessage("Ops! Ocorreu algum erro!", true)
+    }
     return EMPTY
   }
   read(): Observable<Department[]> {
