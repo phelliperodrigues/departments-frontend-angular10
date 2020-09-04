@@ -13,13 +13,15 @@ export class DepartmentReadComponent implements OnInit {
   departments: Department[]
   displayedColumns = ['id','name', 'region', 'city', 'state', 'boardDirector', 'action' ]
   constructor(private departmentService: DepartmentService) { }
-
+  isLoading = true;
   ngOnInit(): void {
     this.departmentService.read().subscribe(departments => {
+      this.isLoading = false;
       this.departments = departments
       console.log(departments);
       
-    })
+    }, 
+    error => this.isLoading = false)
   }
 
 }
